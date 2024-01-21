@@ -1,7 +1,21 @@
-export const contract_address="0x6fbC56BCfbC7Be57607431F25d5F2919bDd094cb";
+export const contract_address="0x9e34AD77A68a788dbF364505970f1877AC47caDe";
 export const govt_Address="0x4191B0E7FF2468FA2eF718Ad377f54000AF320E0";
 
 export const contractABI=[
+	{
+		"inputs": [],
+		"name": "fundContract",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "submitTip",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
@@ -58,8 +72,36 @@ export const contractABI=[
 		"type": "event"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "tipper",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tipIndex",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isTrue",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "augmentationAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "verifyTip",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
-		"name": "fundContract",
+		"name": "withdraw",
 		"outputs": [],
 		"stateMutability": "payable",
 		"type": "function"
@@ -101,13 +143,6 @@ export const contractABI=[
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "submitTip",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -139,41 +174,6 @@ export const contractABI=[
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "tipper",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tipIndex",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bool",
-				"name": "_isTrue",
-				"type": "bool"
-			},
-			{
-				"internalType": "uint256",
-				"name": "augmentationAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "verifyTip",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "withdraw",
-		"outputs": [],
-		"stateMutability": "payable",
 		"type": "function"
 	}
 ]
